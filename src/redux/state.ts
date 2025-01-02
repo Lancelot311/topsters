@@ -11,7 +11,6 @@ export type State = {
   gap: number;
   borderColor: string;
   isCircle: boolean;
-  isStar: boolean;
   borderSize: number;
   borderRadius: number;
   showNumbers: boolean;
