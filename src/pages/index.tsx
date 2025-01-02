@@ -27,7 +27,6 @@ import {
   setGap,
   setGradientDirection,
   setIsCircle,
-  setIsStar,
   setPreset,
   setRows,
   setShowNumbers,
@@ -178,7 +177,6 @@ export default function Home() {
   const gap = useSelector((state: State) => state.gap);
   const borderColor = useSelector((state: State) => state.borderColor);
   const isCircle = useSelector((state: State) => state.isCircle);
-  const isStar = useSelector((state: State) => state.isStar);
   const borderSize = useSelector((state: State) => state.borderSize);
   const borderRadius = useSelector((state: State) => state.borderRadius);
   const showNumbers = useSelector((state: State) => state.showNumbers);
@@ -1463,25 +1461,6 @@ export default function Home() {
                                     src={"https:" + item.cover}
                                     alt="Cover"
                                     width={isCircle ? 100 : "unset"}
-                                     <img
-                                    className={styles.cover}
-                                    style={{
-                                      borderRadius: isStar
-                                        ? "100%"
-                                        : borderRadius,
-                                      height: `${isStar ? "100px" : "unset"}`,
-                                      maxHeight: "100px",
-                                      maxWidth: "100px",
-                                      border: `${borderSize}px solid ${borderColor}`,
-                                      boxShadow: `${
-                                        showShadows
-                                          ? "black 3px 3px 10px 0px"
-                                          : "unset"
-                                      }`,
-                                    }}
-                                    src={"https:" + item.cover}
-                                    alt="Cover"
-                                    width={isStar ? 100 : "unset"}
                                   ></img>
                                   {showTitles &&
                                     titlesPosition === Position.cover && (
