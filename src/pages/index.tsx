@@ -1012,6 +1012,42 @@ export default function Home() {
                                 src="/icons/cancel.svg"
                                 alt="Cancel"
                               ></Image>
+                             );
+                            }}
+                            className={styles.value}
+                            type="range"
+                            value={borderRadius}
+                            min={0}
+                            max={20}
+                          ></input>
+                          <span className={styles["range-value"]}>
+                            {borderRadius}
+                          </span>
+                        </div>
+                      </div>
+                      <div className={styles.input}>
+                        <label className={styles["input-label"]}>Star</label>
+                        <div className={styles.values}>
+                          <Button
+                            selected={isStar}
+                            onClick={() => dispatch(setIsStar(!isStar))}
+                          >
+                            {isStar ? (
+                              <Image
+                                width={10}
+                                height={10}
+                                className={styles.icon}
+                                src="/icons/check.svg"
+                                alt="Check"
+                              ></Image>
+                            ) : (
+                              <Image
+                                width={10}
+                                height={10}
+                                className={styles.icon}
+                                src="/icons/cancel.svg"
+                                alt="Cancel"
+                              ></Image>
                             )}
                           </Button>
                         </div>
