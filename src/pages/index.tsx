@@ -27,6 +27,7 @@ import {
   setGap,
   setGradientDirection,
   setIsCircle,
+  setIsStar
   setPreset,
   setRows,
   setShowNumbers,
