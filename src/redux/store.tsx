@@ -28,7 +28,6 @@ const copy = (targetState: State, sourceState: State) => {
   targetState.gap = sourceState.gap;
   targetState.borderColor = sourceState.borderColor;
   targetState.isCircle = sourceState.isCircle;
-  targetState.isStar = sourceState.isStar;
   targetState.borderSize = sourceState.borderSize;
   targetState.borderRadius = sourceState.borderRadius;
   targetState.showNumbers = sourceState.showNumbers;
@@ -51,7 +50,6 @@ const initialState: State = {
   gap: 20,
   borderColor: "#cccccc",
   isCircle: false,
-  isStar: false,
   borderSize: 0,
   borderRadius: 0,
   showNumbers: false,
@@ -101,9 +99,6 @@ export const stateSlice = createSlice({
     },
     setIsCircle: (state, value: { payload: boolean }) => {
       state.isCircle = value.payload;
-    },
-    setIsStar: (state, value: { payload: boolean }) => {
-      state.isStar = value.payload;
     },
     setBorderSize: (state, value: { payload: number }) => {
       state.borderSize = value.payload;
@@ -165,7 +160,6 @@ export const stateSlice = createSlice({
         state.borderSize = 0;
         state.borderRadius = 0;
         state.isCircle = false;
-        state.isStar = false;
         state.showNumbers = true;
         state.showShadows = false;
         state.font = Font.monospace;
@@ -185,7 +179,6 @@ export const stateSlice = createSlice({
         state.borderSize = 0;
         state.borderRadius = 8;
         state.isCircle = false;
-        state.isStar = false;
         state.showNumbers = true;
         state.showShadows = true;
         state.font = Font.lato;
@@ -236,7 +229,6 @@ export const {
   setGap,
   setBorderColor,
   setIsCircle,
-  setIsStar,
   setBorderSize,
   setBorderRadius,
   setShowNumbers,
